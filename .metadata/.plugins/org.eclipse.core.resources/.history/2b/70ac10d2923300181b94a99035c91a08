@@ -1,0 +1,166 @@
+import java.util.*;
+
+
+/**
+ * Chapter 19 - Result-controlled Loops Exercises 1-4.
+ * 
+ * @author TODO Your Name
+ * @version TODO Date
+ * 
+ * @author Period - TODO Your Period
+ * @author Assignment - Ch19Ex1to4
+ * 
+ * @author Sources - TODO list collaborators
+ */
+public class Ch19Ex1to4
+{
+    private Scanner scan;
+
+
+    /**
+     * Constructs a Scanner for input from the console.
+     */
+    public Ch19Ex1to4()
+    {
+        scan = new Scanner( System.in );
+    }
+
+
+    /**
+     * Constructs a Scanner to evaluate passed input (used for testing).
+     * 
+     * @param str
+     *            input for the various methods
+     */
+    public Ch19Ex1to4( String str )
+    {
+        scan = new Scanner( str );
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void creditCardBill()
+    {
+        System.out.println( "Enter the monthly payment:" );
+        double pay = scan.nextDouble();
+        double balance = 1000;
+        int month = 1;
+        while ( balance > 0 )
+        {
+            System.out.print( "Month: " + month + "\t" );
+            balance = ( ( balance + balance * 1.5 / 100 ) - pay );
+            System.out.print( "balance: " + balance + "\t" );
+            System.out.println( "total payments: " + pay * month );
+            month += 1;
+        }
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void drugPotency()
+    {
+        int month = 0;
+        double effect = 100;
+        while ( effect > 50 )
+        {
+            System.out.print( "month: " + month + "\t" );
+            System.out.print( "effectiveness: " + effect );
+            effect = effect * 24 / 25;
+            if ( effect < 50 )
+            {
+                System.out.println( " DISCARDED" );
+            }
+            else
+            {
+                System.out.println();
+            }
+        }
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void eToX()
+    {
+        // TODO Your code goes here
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void newtons1overX()
+    {
+        // TODO Your code goes here
+    }
+
+
+    /**
+     * Testing method: instantiates a Lesson15Exercises object and then invokes
+     * each method.
+     * 
+     * @param args
+     *            command line parameters (not used)
+     */
+    public static void main( String[] args )
+    {
+        Scanner kbd = new Scanner( System.in );
+        boolean done = false;
+
+        Ch19Ex1to4 exercise = new Ch19Ex1to4();
+
+        do
+        {
+            System.out.println();
+            System.out.println();
+            System.out.println( "Make a selection" );
+            System.out.println();
+            System.out.println( "   (1) Credit Card Bill" );
+            System.out.println( "   (2) Drug Potency" );
+            System.out.println( "   (3) e^x" );
+            System.out.println( "   (4) 1/X by Newton's Method" );
+            System.out.println( "   (Q) Quit" );
+            System.out.println();
+            System.out.print( "Enter a choice:  " );
+            String response = kbd.nextLine();
+
+            if ( response.length() > 0 )
+            {
+                System.out.println();
+
+                switch ( response.charAt( 0 ) )
+                {
+                    case '1':
+                        exercise.creditCardBill();
+                        break;
+                    case '2':
+                        exercise.drugPotency();
+                        break;
+                    case '3':
+                        exercise.eToX();
+                        break;
+                    case '4':
+                        exercise.newtons1overX();
+                        break;
+                    default:
+                        if ( response.toLowerCase().charAt( 0 ) == 'q' )
+                        {
+                            done = true;
+                        }
+                        else
+                        {
+                            System.out.print( "Invalid Choice" );
+                        }
+                        break;
+                }
+            }
+        } while ( !done );
+
+        System.out.println( "Goodbye!" );
+    }
+}

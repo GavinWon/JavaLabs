@@ -1,0 +1,242 @@
+import java.util.*;
+
+/**
+ * Chapter 17 - Nesting Loops and ifs Exercises 1-5
+ * 
+ * @author TODO Your Name
+ * @version TODO Date
+ * 
+ * @author Period - TODO Your
+ * @author Period Assignment - Ch17Ex1to5
+ * 
+ * @author Sources - TODO list collaborators
+ */
+public class Ch17Ex1to5
+{
+    private Scanner scan;
+
+    /**
+     * Constructs a Scanner for input from the console.
+     */
+    public Ch17Ex1to5()
+    {
+        scan = new Scanner( System.in );
+    }
+
+    /**
+     * Constructs a Scanner to evaluate passed input (used for testing).
+     * 
+     * @param str  input for the various methods
+     */
+    public Ch17Ex1to5( String str )
+    {
+        scan = new Scanner( str );
+    }
+
+    /**
+     * TODO Description
+     * @return a double for how long one should rest
+     */
+    public double jetLagCalc()
+    {
+        double daysOfRecovery = 0.0;
+
+        System.out.println("Number of hours on plane:");
+        int h = scan.nextInt();
+        System.out.println("Number of zones passed:");
+        int z = scan.nextInt();
+        System.out.println("Depart Time");
+        int d = scan.nextInt();
+        System.out.println("Enter the arrival time:");
+        int a = scan.nextInt();
+        
+        if (d >= 1 && d < 8) {
+            d = 5;
+        } else if (d < 12) {
+            d = 0;
+        } else if (d < 18) {
+            d = 1;
+        } else if (d < 22) {
+            d = 3;
+        } else {
+            d = 4;
+        }
+        
+        if (a >= 1 && a < 8) {
+            a = 3;
+        } else if (a < 12) {
+            a = 4;
+        } else if (a < 18) {
+            a = 2;
+        } else if (a < 22) {
+            a = 0;
+        } else {
+            a = 1;
+        }
+        daysOfRecovery = (h / 2.0 + (z - 3) + d + a) / 10.0;
+
+        return daysOfRecovery;
+    }
+
+    /**
+     * TODO Description
+     * @return an array of longs
+     */
+    public long[] addUpSquaresAndCubes()
+    {
+        long sumSquares = 0;
+        long sumCubes = 0;
+
+        System.out.println("Upper Limit:");
+        int limit = scan.nextInt();
+        while (limit > 0) {
+            sumSquares += limit * limit;
+            sumCubes += limit * limit * limit;
+            limit = limit - 1;
+        }
+
+        return new long[]{sumSquares, sumCubes};
+    }
+
+    /**
+     * TODO Description
+     * @return
+     */
+    public double powerOfANumber()
+    {
+        double pow = 1.0;
+
+        System.out.println("Enter x");
+        double x = scan.nextDouble();
+        System.out.println("Enter y");
+        int y = scan.nextInt();
+        
+        if (y < 0) {
+             x = 1.0 / x;
+             y *= -1;
+        }
+        while (y > 0) {
+            pow *= x;
+            y -= 1;
+        }
+
+        return pow;
+    }
+
+    /**
+     * TODO Description
+     */
+    public void wedgeOfStars()
+    {
+        System.out.println("Initial number of stars:");
+        int init = scan.nextInt();
+        int init1;
+        while (init > 0) {
+            init1 = init;
+            while(init1 > 0) {
+                System.out.print("*");
+                init1 -= 1;
+            }
+            init -= 1;
+            System.out.println();
+        }
+    }
+
+    /**
+     * TODO Description
+     */
+    public void pineTree()
+    {
+        System.out.println("Enter the height of the tree:");
+        int height = scan.nextInt();
+        int height2;
+        int numAst = 1;
+        int numAst2;
+        while (height > 0) {
+            height2 = height;
+            while(height2 - 1 > 0) {
+                System.out.print(" ");
+                height2 = height2 - 1;
+            }
+            numAst2 = numAst;
+            while(numAst2 > 0) {
+                System.out.print("*");
+                numAst2 -= 1;
+            }
+            System.out.println();
+            numAst += 2;
+            height -= 1;
+        }
+    }
+
+    /**
+     * Testing method: instantiates a Ch17Ex1to4 object and
+     * then invokes each method.
+     * 
+     * @param args  command line parameters (not used)
+     */
+    public static void main( String[] args )
+    {
+        Scanner kbd = new Scanner( System.in );
+        boolean done = false;
+
+        Ch17Ex1to5 ex = new Ch17Ex1to5();
+
+        do
+        {
+            System.out.println();
+            System.out.println();
+            System.out.println( "Make a selection" );
+            System.out.println();
+            System.out.println( "   (1) Jet Lag Calculator" );
+            System.out.println( "   (2) Adding up Squares and Cubes" );
+            System.out.println( "   (3) Power of a number" );
+            System.out.println( "   (4) Wedge of Stars" );
+            System.out.println( "   (5) Pine Tree" );
+            System.out.println( "   (Q) Quit" );
+            System.out.println();
+            System.out.print( "Enter a choice:  " );
+            String response = kbd.nextLine();
+
+            if ( response.length() > 0 )
+            {
+                System.out.println();
+
+                switch ( response.charAt( 0 ) )
+                {
+                    case '1':
+                        double daysOfRecovery = ex.jetLagCalc();
+                        System.out.println( "Days of recovery: " + daysOfRecovery);
+                        break;
+                    case '2':
+                        long[] sums = ex.addUpSquaresAndCubes();
+                        System.out.println( "Sum of squares: " + sums[0] );
+                        System.out.println( "Sum of cubes : " + sums[1]  );
+                        break;
+                    case '3':
+                        double pow = ex.powerOfANumber();
+                        System.out.println("powerOfANumber() = " + pow );
+                        break;
+                    case '4':
+                        ex.wedgeOfStars();
+                        break;
+                    case '5':
+                        ex.pineTree();
+                        break;
+                    default:
+                        if ( response.toLowerCase().charAt( 0 ) == 'q' )
+                        {
+                            done = true;
+                        }
+                        else
+                        {
+                            System.out.print( "Invalid Choice" );
+                        }
+                        break;
+                }
+            }
+        } while ( !done );
+
+        System.out.println( "Goodbye!" );
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings settings_version="1.0">
+<sites>
+<site siteurl="http://205.173.41.10/javasnarf/snarf.xml"/>
+</sites>
+<history>
+<install date="03.14.2018.02.20.10" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch13_If" name="Ch13_If" publisher="gkp" version="1.1"/>
+<install date="03.19.2018.01.19.00" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch14_BooleanExp" name="Ch14_BooleanExp" publisher="gkp" version="1.1"/>
+<install date="03.19.2018.01.54.07" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch15_Loops" name="Ch15_Loops" publisher="gkp" version="1.1"/>
+<install date="03.20.2018.01.46.33" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch16_MoreLoops" name="Ch16_MoreLoops" publisher="gkp" version="1.2"/>
+<install date="03.21.2018.02.16.56" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch17_NestingLoops" name="Ch17_NestingLoops" publisher="gkp" version="1.3"/>
+<install date="03.26.2018.01.24.31" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch18_SentinelLoops" name="Ch18_SentinelLoops" publisher="gkp" version="1.1"/>
+<install date="03.29.2018.01.31.23" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch19_ResultLoops" name="Ch19_ResultLoops" publisher="gkp" version="1.1"/>
+<install date="04.02.2018.01.38.41" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch20_RandomClass" name="Ch20_RandomClass" publisher="gkp" version="1.1"/>
+<install date="04.06.2018.01.51.15" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch41_for" name="Ch41_for" publisher="gkp" version="1.2"/>
+<install date="04.09.2018.04.09.46" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch47_ArrayAlgorithms" name="Ch47_ArrayAlgorithms" publisher="gkp" version="3.0"/>
+<install date="04.11.2018.02.00.32" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch48_ArraysAsParameters" name="Ch48_ArraysAsParameters" publisher="gkp" version="1.2"/>
+<install date="04.23.2018.01.29.38" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch49B_ArraysOfObj" name="Ch49B_ArraysOfObj" publisher="gkp" version="1.4"/>
+<install date="05.03.2018.05.53.38" location="C:\Users\gwong676\Dropbox\workspaceNew\Ch54_ArrayList" name="Ch54_ArrayList" publisher="gkp" version="1.2"/>
+</history>
+</settings>

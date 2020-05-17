@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\HW Assignments"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch49C_2DArrays"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch41_for"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch20_RandomClass"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch18_SentinelLoops"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch17_NestingLoops"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch16_MoreLoops"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch15_Loops"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch14_BooleanExp"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch49B_ArraysOfObj"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch48_ArraysAsParameters"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch47_ArrayAlgorithms"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\FunLearn"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch19_ResultLoops"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch13_If"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\ASCIIArt"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\ch08_PrimitiveDataTypes"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch09a_VarAssign"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch09b_ExpArithOps"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch09c_ObjectData"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch10_IO"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch11_FloatingPoint"/>
+		<item value="C:\Users\gwong676\Dropbox\workspaceNew\Ch12_DecisionMaking"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\gwong676\Dropbox\workspaceNew"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+</section>

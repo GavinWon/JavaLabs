@@ -1,0 +1,209 @@
+import java.util.*;
+
+
+/**
+ * Chapter 18 - Sentinel Controlled Loops Exercises 1-5.
+ * 
+ * @author TODO Your Name
+ * @version TODO Date
+ * 
+ * @author Period - TODO
+ * @author Your Period
+ * @author Assignment - Ch18Ex1to5
+ * 
+ * @author Sources - TODO list collaborators
+ */
+public class Ch18Ex1to5
+{
+    private Scanner scan;
+
+
+    /**
+     * Constructs a Scanner for input from the console.
+     */
+    public Ch18Ex1to5()
+    {
+        scan = new Scanner( System.in );
+    }
+
+
+    /**
+     * Constructs a Scanner to evaluate passed input (used for testing).
+     * 
+     * @param str
+     *            input for the various methods
+     */
+    public Ch18Ex1to5( String str )
+    {
+        scan = new Scanner( str );
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void milesPerGallon()
+    {
+        System.out.println( "Miles Per Gallon Program" );
+        System.out.println( "Initial miles: " );
+        int initMiles = scan.nextInt();
+        int finalMiles;
+        int g;
+
+        while ( initMiles > 0 )
+        {
+            System.out.println( "Final Miles: " );
+            finalMiles = scan.nextInt();
+            System.out.println( "Gallons: " );
+            g = scan.nextInt();
+            System.out.println( "Milers per Gallon: " + ( finalMiles - initMiles + 0.0 ) / g );
+            System.out.println( "Initial miles: " );
+            initMiles = scan.nextInt();
+        }
+        System.out.println( "bye" );
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void inRangeAdder()
+    {
+        System.out.println( "In-range Adder" );
+        System.out.println();
+        System.out.println( "Low end of range: " );
+        int lowEnd = scan.nextInt();
+        System.out.println( "High end of range: " );
+        int highEnd = scan.nextInt();
+
+        int in = 0;
+        int out = 0;
+        System.out.println( "Enter data: " );
+        int data = scan.nextInt();
+        while ( data != 0 )
+        {
+            if ( data < highEnd && data > lowEnd )
+            {
+                in += data;
+            }
+            else
+            {
+                out += data;
+            }
+            System.out.println("Enter data: ");
+            data = scan.nextInt();
+        }
+        System.out.println();
+        System.out.println("Sum of in range values: " + in);
+        System.out.println("Sum of out of range values: " + out);
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void shippingCostCalc()
+    {
+        System.out.println("Weight of Order: ");
+        int weight = scan.nextInt();
+        while (weight > 0) {
+            if (weight <= 10) {
+                System.out.println("Shipping Cost: $3.00");
+            }
+            else {
+                System.out.println("Shipping Cost: $" + (3.00 + (weight - 10) * 0.25));
+            }
+            System.out.println();
+            System.out.println("Weight of Order: ");
+            weight = scan.nextInt();
+        }
+        System.out.println("bye");
+        
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void areaOfRectangle()
+    {
+        // TODO Your code goes here
+    }
+
+
+    /**
+     * TODO Description
+     */
+    public void loginSimulator()
+    {
+        // TODO Your code goes here
+    }
+
+
+    /**
+     * Testing method: instantiates a Ch18Ex1to5 object and then invokes each
+     * method.
+     * 
+     * @param args
+     *            command line parameters (not used)
+     */
+    public static void main( String[] args )
+    {
+        Scanner kbd = new Scanner( System.in );
+        boolean done = false;
+
+        Ch18Ex1to5 exercise = new Ch18Ex1to5();
+
+        do
+        {
+            System.out.println();
+            System.out.println();
+            System.out.println( "Make a selection" );
+            System.out.println();
+            System.out.println( "   (1) Miles per Gallon" );
+            System.out.println( "   (2) In-range Adder" );
+            System.out.println( "   (3) Shipping Cost Calculator" );
+            System.out.println( "   (4) Area of Rectangles" );
+            System.out.println( "   (5) Login simulator" );
+            System.out.println( "   (Q) Quit" );
+            System.out.println();
+            System.out.print( "Enter a choice:  " );
+            String response = kbd.nextLine();
+
+            if ( response.length() > 0 )
+            {
+                System.out.println();
+
+                switch ( response.charAt( 0 ) )
+                {
+                    case '1':
+                        exercise.milesPerGallon();
+                        break;
+                    case '2':
+                        exercise.inRangeAdder();
+                        break;
+                    case '3':
+                        exercise.shippingCostCalc();
+                        break;
+                    case '4':
+                        exercise.areaOfRectangle();
+                        break;
+                    case '5':
+                        exercise.loginSimulator();
+                        break;
+                    default:
+                        if ( response.toLowerCase().charAt( 0 ) == 'q' )
+                        {
+                            done = true;
+                        }
+                        else
+                        {
+                            System.out.print( "Invalid Choice" );
+                        }
+                        break;
+                }
+            }
+        } while ( !done );
+        System.out.println( "Goodbye!" );
+    }
+}

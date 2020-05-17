@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;pswd&apos; in &apos;Ch20Exercises.pswdGen(...)&apos; to &apos;password&apos;&#x0D;&#x0A;- Original project: &apos;Ch20_RandomClass&apos;&#x0D;&#x0A;- Original element: &apos;Ch20Exercises.pswdGen(int).pswd&apos;&#x0D;&#x0A;- Renamed element: &apos;pswd&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;pswd&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/&lt;{Ch20Exercises.java[Ch20Exercises~pswdGen~I@pswd!4401!4417!4408!4411!QString;!0!false" name="password" references="true" stamp="1522996868614" version="1.0"/>
+</session>

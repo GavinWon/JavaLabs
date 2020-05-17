@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class BitManipulation
+{
+    private static Scanner scan = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+//        System.out.println("What do you want me to do?");
+//        System.out.println("1: Check if an integer is a power of 2.");
+//        System.out.println("2: Find the number of bits set for a positive integer");
+//        int number = scan.nextInt();
+//        if(number == 1) {
+//            System.out.println("What number would you like to check");
+//            int value = scan.nextInt();
+//            System.out.println(checkPowerofTwo(value));
+//        }
+        int n = 16;
+        System.out.println( checkPowerofTwo(n));
+        
+    }
+    private static boolean checkPowerofTwo(int value){
+        if ((value & (value - 1)) == 1)
+            return true;
+        else
+            return false;
+    }
+}
